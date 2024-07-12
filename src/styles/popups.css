@@ -1,0 +1,246 @@
+.modal-oz,
+.modal-zz {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal-oz--show {
+  min-width: 320px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow-y: clip;
+}
+
+.modal-oz__burger-switch {
+  margin-top: 24px;
+  margin-right: auto;
+  margin-bottom: 32px;
+  margin-left: 16px;
+}
+
+.modal-oz__title {
+  display: flex;
+  align-items: center;
+}
+
+.modal-oz__title-highlight {
+  height: 40px;
+  border-left: 4px solid #41f6d7;
+  margin-right: 12px;
+}
+
+.modal-oz__title-name {
+  font-family: "TT Lakes", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.modal-oz__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-oz__form-name,
+.modal-oz__form-phone,
+.modal-oz__form-email,
+.modal-oz__form-message {
+  width: 288px;
+  height: 48px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  color: #b5b6bc;
+  font-size: 16px;
+  font-family: "TT Lakes", sans-serif;
+  padding-left: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.modal-oz__form-name,
+.modal-oz__form-phone,
+.modal-oz__form-email {
+  margin-bottom: 16px;
+}
+
+.modal-oz__disclaimer > p {
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #7e7e82;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.modal-oz__disclaimer > p > a {
+  color: #ff3e79;
+  text-decoration: none;
+}
+
+.modal-oz__submit-form-button {
+  display: flex;
+  justify-content: end;
+  margin-right: 16px;
+}
+
+.modal-oz__submit-form-button:hover,
+.modal-oz__burger-switch:hover,
+.modal-oz__form-message:hover,
+.modal-oz__form-name:hover,
+.modal-oz__form-phone:hover,
+.modal-oz__form-email:hover,
+a:hover {
+  cursor: pointer;
+}
+
+.modal-zz--show {
+  min-width: 320px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-zz__burger-switch {
+  margin-top: 24px;
+  margin-right: auto;
+  margin-bottom: 32px;
+  margin-left: 16px;
+}
+
+.modal-zz__title {
+  display: flex;
+  align-items: center;
+}
+
+.modal-zz__title-highlight {
+  height: 40px;
+  border-left: 4px solid #41f6d7;
+  margin-right: 12px;
+}
+
+.modal-zz__title-name {
+  font-family: "TT Lakes", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.modal-zz__form-phone {
+  width: 288px;
+  height: 48px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  color: #b5b6bc;
+  font-size: 16px;
+  font-family: "TT Lakes", sans-serif;
+  padding-left: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.modal-zz__disclaimer > p {
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #7e7e82;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.modal-zz__disclaimer > p > a {
+  color: #ff3e79;
+  text-decoration: none;
+}
+
+.modal-zz__submit-form-button {
+  display: flex;
+  justify-content: end;
+  margin-right: 16px;
+}
+
+.modal-zz__submit-form-button:hover,
+.modal-zz__burger-switch:hover,
+.modal-zz__form-phone:hover,
+a:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 1120px) {
+  .modal-oz,
+  .modal-zz {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .modal-oz--show {
+    width: 440px;
+    padding: 0;
+    background-color: #ffffff; /* добавить transparency  нужного уровня*/
+    float: right;
+    margin-bottom: auto;
+    min-height: 940px;
+    box-shadow: -10px 0 5px -8px #7e7e82;
+  }
+
+  .modal-oz__title-highlight {
+    margin-right: 32px;
+  }
+
+  .modal-oz__burger-switch {
+    position: absolute;
+    right: 473px;
+    top: -5px;
+  }
+
+  .modal-oz__form-name,
+  .modal-oz__form-phone,
+  .modal-oz__form-email,
+  .modal-oz__form-message {
+    width: 376px;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  .modal-oz__disclaimer > p {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .modal-oz__submit-form-button {
+    margin-right: 16px;
+  }
+  .modal-zz--show {
+    width: 440px;
+    padding: 0;
+    background-color: #ffffff; /* добавить transparency  нужного уровня*/
+    float: right;
+    margin-bottom: auto;
+    min-height: 940px;
+    box-shadow: -10px 0 5px -8px #7e7e82;
+  }
+
+  .modal-zz__title-highlight {
+    margin-right: 32px;
+  }
+
+  .modal-zz__burger-switch {
+    position: absolute;
+    right: 473px;
+    top: -5px;
+  }
+
+  .modal-zz__form-phone {
+    width: 376px;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  .modal-zz__disclaimer > p {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .modal-zz__submit-form-button {
+    margin-right: 16px;
+  }
+}

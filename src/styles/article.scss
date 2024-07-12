@@ -1,0 +1,332 @@
+@font-face {
+  font-family: "TT Lakes";
+  src: url("TTLakes-Regular.eot");
+  src: local("TT Lakes Regular"), local("TTLakes-Regular"),
+    url("TTLakes-Regular.eot?#iefix") format("embedded-opentype"),
+    url("TTLakes-Regular.woff") format("woff"),
+    url("TTLakes-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("TTLakes-Medium.eot");
+  src: local("TT Lakes Medium"), local("TTLakes-Medium"),
+    url("TTLakes-Medium.eot?#iefix") format("embedded-opentype"),
+    url("TTLakes-Medium.woff") format("woff"),
+    url("TTLakes-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("TTLakes-Bold.eot");
+  src: local("TT Lakes Bold"), local("TTLakes-Bold"),
+    url("TTLakes-Bold.eot?#iefix") format("embedded-opentype"),
+    url("TTLakes-Bold.woff") format("woff"),
+    url("TTLakes-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+$backgroundcolor: #f8f8f8;
+$headerbar: #ffffff;
+$headerbarborderbottom: #d9fff5;
+$textcolor_1: #7e7e82;
+$textcolor_2: #1b1c21;
+$menubuttonborder: #b8ffec;
+$activebutton: turquoise;
+
+body {
+  font-family: "TTLakes", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $backgroundcolor;
+  overflow: hidden;
+  min-width: 320px;
+}
+
+.header__upper-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 88px;
+  background-color: $headerbar;
+  align-items: center;
+  border-bottom: 1px solid $headerbarborderbottom;
+  .upper-menu__burger-link:hover,
+  .upper-menu__repair-link:hover,
+  .upper-menu__check-status-link:hover,
+  .upper-menu__call:hover,
+  .upper-menu__chat:hover,
+  .upper-menu__profile:hover {
+    cursor: pointer;
+  }
+  .upper-menu__logo-pic {
+    height: 50.81px;
+  }
+  .upper-menu__divider-pic {
+    height: 32px;
+    width: 2px;
+  }
+  .upper-menu__divider-pad-view-pic,
+  .upper-menu__call,
+  .upper-menu__chat,
+  .upper-menu__profile {
+    display: none;
+  }
+}
+
+.header__main-menu {
+  .header__main-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 40px;
+    align-items: center;
+    margin-left: 6px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    .main-menu__title {
+      font-size: 24px;
+      font-weight: bold;
+      padding-bottom: 6px;
+      padding-top: 6px;
+      margin-left: 12px;
+    }
+  }
+}
+
+.header__main-menu,
+.main-article,
+.footer {
+  background-color: $backgroundcolor;
+}
+
+.header__menu {
+  display: flex;
+  overflow-x: scroll;
+  /*overflow: hidden;*/
+  text-shadow: none;
+  background-color: transparent;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: 16px;
+  .header__desktop-header-menu {
+    display: none;
+  }
+  .menu-text {
+    white-space: nowrap;
+    color: $textcolor_1;
+  }
+}
+
+button:hover {
+  border: 2px solid $menubuttonborder;
+  border-radius: 2px;
+  background-color: $backgroundcolor;
+  cursor: pointer;
+}
+
+button {
+  background-color: $backgroundcolor;
+  border-color: transparent;
+  height: 40px;
+  font-size: 16px;
+  margin-right: 2px;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+button:active {
+  cursor: pointer;
+  color: $activebutton;
+  box-shadow: none;
+}
+.main__article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 320px;
+  .article__item {
+    .article__paragraph {
+      margin: 16px;
+      background-color: $backgroundcolor;
+      font-family: "TTLakes", sans-serif;
+      .hidden-text1,
+      .hidden-text2 {
+        display: none;
+      }
+    }
+    .article__read-more {
+      display: flex;
+      flex-direction: row;
+      .article__read-more-button-text {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        margin-left: 8px;
+        padding: 6px 0;
+        width: 312px;
+        height: auto;
+        white-space: nowrap;
+        cursor: not-allowed;
+        border-radius: 0;
+        text-decoration: none;
+        color: $textcolor_2;
+      }
+      .article__read-more-button-text:hover {
+        cursor: pointer;
+      }
+
+      .article__read-more-button-icon {
+        width: 24px;
+        height: 24px;
+        margin-left: 16px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+/*@media screen and (min-width: 0) {
+  body {
+	width: 320px;
+  }*/
+
+/*}*/
+@media screen and (min-width: 768px) {
+  /*body {
+	min-width: 768px;
+  }*/
+
+  .header__upper-menu {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .upper-menu__logo-pic {
+    margin-right: 250px;
+    flex-shrink: 0;
+  }
+
+  .header__menu {
+    margin-top: 0px;
+    overflow-x: auto;
+  }
+  .main__article {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 1119px;
+  }
+  .article__paragraph {
+    width: 312px;
+    height: auto;
+    margin-left: 0px;
+  }
+  .hidden-text1 {
+    display: inline-block;
+  }
+  .hidden-text2 {
+    display: none;
+  }
+  .article__image {
+    width: 360px;
+    height: 208px;
+  }
+  .header__desktop-header-menu {
+    display: none;
+  }
+  .upper-menu__divider-pad-view-pic,
+  .upper-menu__call,
+  .upper-menu__chat,
+  .upper-menu__profile {
+    display: block;
+    /*//должно работать*/
+  }
+}
+@media screen and (min-width: 1120px) {
+  body {
+    width: 1120px;
+    margin-left: 301px;
+    margin-right: auto;
+  }
+
+  header {
+    display: flex;
+  }
+  .page__header {
+    width: 1096px;
+  }
+  .header__upper-menu {
+    display: none;
+  }
+
+  .header__main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 42px;
+  }
+  .header__desktop-header-menu {
+    height: 40px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .desktop-header-menu__repair-menu-item-icon,
+  .desktop-header-menu__check-status-menu-item-icon {
+    margin-right: 32px;
+  }
+
+  .desktop-header-menu__repair-menu-item,
+  .desktop-header-menu__check-status-menu-item {
+    margin-right: 8px;
+    text-decoration: none;
+    color: $textcolor_2;
+    cursor: pointer;
+  }
+
+  .header__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 1063px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 0px;
+  }
+
+  .main__article {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-width: 1120px;
+    margin-right: 32px;
+  }
+  .hidden-text1,
+  .hidden-text2 {
+    display: block;
+  }
+  .article__paragraph {
+    width: 490px;
+    height: auto;
+  }
+  .article__image {
+    width: 531.35px;
+    height: 307px;
+  }
+  .upper-menu__divider-pad-view-pic,
+  .upper-menu__call,
+  .upper-menu__chat,
+  .upper-menu__profile {
+    display: none;
+  }
+}
