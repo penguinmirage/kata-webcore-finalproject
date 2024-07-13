@@ -1116,16 +1116,22 @@ a:hover {
   }
 }
 @media screen and (min-width: 1120px) {
+  body {
+    width: 80%;
+    margin-right: 17%;
+    margin-left: auto;
+  }
+
   .blurred {
     filter: blur(2px);
   }
 
   .block0 {
-    width: 320px;
+    width: 301px;
     height: 100vh;
     background-color: #ffffff;
     font-family: "TT Lakes", sans-serif;
-    margin: 0;
+    margin-left: 3%;
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1154,8 +1160,8 @@ a:hover {
     display: flex;
   }
   .page__header {
-    width: 1096px;
-    margin-left: 320px;
+    width: 1120px;
+    margin-left: 301px;
   }
   .header__upper-menu {
     display: none;
