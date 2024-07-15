@@ -49,7 +49,7 @@ main {
 
 .block0--show {
   position: absolute;
-  z-index: 3;
+  z-index: 100;
   width: 100vh;
   height: 100vh;
   background-color: #ffffff;
@@ -616,7 +616,7 @@ button:active {
 .modal-oz--show {
   display: block;
   position: absolute;
-  z-index: 3;
+  z-index: 101;
   min-width: 320px;
   height: 100vh;
   margin: 0;
@@ -707,13 +707,14 @@ a:hover {
 .modal-zz--show {
   display: block;
   position: absolute;
-  z-index: 4;
+  z-index: 101;
   min-width: 320px;
   height: auto;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
   height: 100vh;
+  overflow-y: clip;
 }
 
 .modal-zz__burger-switch {

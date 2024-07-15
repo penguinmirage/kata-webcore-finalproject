@@ -1,11 +1,11 @@
-window.onload = function () {
-  var hidePopup = document.getElementById("popup");
-  document.onlick = function (e) {
-    if (e.target.id === ".main") {
-      hidePopup.style.display = "none";
-    }
-  };
-};
+// window.onload = function () {
+//   var hidePopup = document.querySelector(".popup");
+//   document.onlick = function (e) {
+//     if (e.target.class !== "popup") {
+//       hidePopup.style.display = "none";
+//     }
+//   };
+// };
 
 if (window.matchMedia("(min-width: 1119px)").matches) {
   const button = document.querySelector(".show-hide__button");
@@ -140,6 +140,81 @@ var closePopupButtonL1 = popupL1.querySelector(".button-close");
 var closePopupButtonD = popupL.querySelector(".button-close");
 var closePopupButtonD1 = popupL1.querySelector(".button-close");
 
+document.addEventListener("mousedown", function (e) {
+  if (e.target.closest(".popup") === null) {
+    // popup.style.display = 'none';
+    popup0.classList.remove("block0--show");
+    popup.classList.remove("modal-oz--show");
+    popup1.classList.remove("modal-zz--show");
+    popupL1.classList.remove("modal-zz--show");
+    popupL.classList.remove("modal-oz--show");
+    popupD1.classList.remove("modal-zz--show");
+    popupD.classList.remove("modal-oz--show");
+    document.querySelector(".main").style.filter = "none";
+    document.querySelector(".page__header").style.filter = "none";
+    document.querySelector(".footer").style.filter = "none";
+  }
+});
+
+document.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    popup0.classList.remove("block0--show");
+    popup.classList.remove("modal-oz--show");
+    popup1.classList.remove("modal-zz--show");
+    popupL1.classList.remove("modal-zz--show");
+    popupL.classList.remove("modal-oz--show");
+    popupD1.classList.remove("modal-zz--show");
+    popupD.classList.remove("modal-oz--show");
+    document.querySelector(".main").style.filter = "none";
+    document.querySelector(".page__header").style.filter = "none";
+    document.querySelector(".footer").style.filter = "none";
+  }
+});
+
+// popup0.addEventListener("click", function (event) {
+//   if (event.target !== main) {
+//     popup0.classList.remove("block0--show");
+//     document.querySelector(".main").style.filter = "none";
+//     document.querySelector(".page__header").style.filter = "none";
+//     document.querySelector(".footer").style.filter = "none";
+//   }
+// });
+
+// window.onclick = function (e) {
+//   if (e.target !== popup0) {
+//     document.querySelector(".block0--show").style.filter = "none";
+//     document.querySelector(".main").style.filter = "none";
+//     document.querySelector(".page__header").style.filter = "none";
+//     document.querySelector(".footer").style.filter = "none";
+//   }
+// };
+
+// document.addEventListener("mousedown", function (evt) {
+//   if (popup.classList.contains("popup")) {
+//     popup0.classList.remove("block0--show");
+//     popup.classList.remove("modal-oz--show");
+//     popup1.classList.remove("modal-zz--show");
+//     popupL1.classList.remove("modal-zz--show");
+//     popupL.classList.remove("modal-oz--show");
+//     popupD1.classList.remove("modal-zz--show");
+//     popupD.classList.remove("modal-oz--show");
+//     document.querySelector(".main").style.filter = "none";
+//     document.querySelector(".page__header").style.filter = "none";
+//     document.querySelector(".footer").style.filter = "none";
+//   }
+// });
+
+// main.addEventListener("click", function () {
+//
+// popup.addEventListener("click", (event) => event.stopPropagation());
+// popup1.addEventListener("click", (event) => event.stopPropagation());
+// popup0.addEventListener("click", (event) => event.stopPropagation());
+// popupL1.addEventListener("click", (event) => event.stopPropagation());
+// popupL.addEventListener("click", (event) => event.stopPropagation());
+// popupD.addEventListener("click", (event) => event.stopPropagation());
+// popupD1.addEventListener("click", (event) => event.stopPropagation());
+// }
+
 openPopupButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("modal-oz--show");
@@ -239,14 +314,67 @@ closePopupButtonD1.addEventListener("click", function () {
   document.querySelector(".footer").style.filter = "none";
 });
 
-window.onload = function () {
-  var hidePopup = document.getElementById("popup");
-  document.onlick = function (e) {
-    if (e.target.id !== "popup") {
-      hidePopup.style.display = "none";
-    }
-  };
-};
+// var popupOutside = document.querySelector(".main");
+// document.addEventListener("click", function (e) {
+//   if (e.target === ".main") popup0.classList.remove("block0--show");
+//   popup.classList.remove("modal-oz--show");
+//   popup1.classList.remove("modal-zz--show");
+//   popupL1.classList.remove("modal-zz--show");
+//   popupL.classList.remove("modal-oz--show");
+//   popupD1.classList.remove("modal-zz--show");
+//   popupD.classList.remove("modal-oz--show");
+//   document.querySelector(".main").style.filter = "none";
+//   document.querySelector(".page__header").style.filter = "none";
+//   document.querySelector(".footer").style.filter = "none";
+// });
+// window.onclick = (event) => {
+//   if (!event.target.matches(".button-close")) {
+//     if (
+//       (popup0.classList.contains("block0--show"),
+//       popup.classList.contains("modal-oz--show"),
+//       popup1.classList.contains("modal-zz--show"),
+//       popupL1.classList.contains("modal-zz--show"),
+//       popupL.classList.contains("modal-oz--show"),
+//       popupD1.classList.contains("modal-zz--show"),
+//       popupD.classList.contains("modal-oz--show"))
+//     ) {
+//       popup0.classList.remove("block0--show");
+//       popup.classList.remove("modal-oz--show");
+//       popup1.classList.remove("modal-zz--show");
+//       popupL1.classList.remove("modal-zz--show");
+//       popupL.classList.remove("modal-oz--show");
+//       popupD1.classList.remove("modal-zz--show");
+//       popupD.classList.remove("modal-oz--show");
+//       document.querySelector(".main").style.filter = "none";
+//       document.querySelector(".page__header").style.filter = "none";
+//       document.querySelector(".footer").style.filter = "none";
+//     }
+//   }
+// };
+
+// window.onload = function () {
+//   var hidePopup = document.getElementById("popup");
+//   document.onlick = function (e) {
+//     if (e.target.id !== "popup") {
+//       hidePopup.style.display = "none";
+//     }
+//   };
+// };
+
+// document.addEventListener("click", function (e) {
+//   if (evt !== popup0) {
+//     popup0.classList.remove("block0--show");
+//     popup.classList.remove("modal-oz--show");
+//     popup1.classList.remove("modal-zz--show");
+//     popupL1.classList.remove("modal-zz--show");
+//     popupL.classList.remove("modal-oz--show");
+//     popupD1.classList.remove("modal-zz--show");
+//     popupD.classList.remove("modal-oz--show");
+//     document.querySelector(".main").style.filter = "none";
+//     document.querySelector(".page__header").style.filter = "none";
+//     document.querySelector(".footer").style.filter = "none";
+//   }
+// });
 
 //   button.addEventListener("click", () => {
 //     button.textContent = isHidden ? "Показать все" : "Скрыть";
